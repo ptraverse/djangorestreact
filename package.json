@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "prestart": "source ./bin/activate && python backend/manage.py runserver & npm run webpack &  ",
-    "manage.py": "python backend/manage.py ",
     "webpack": "webpack --config webpack.config.js --watch --color",
+    "make-migrations": "source ./bin/activate && python backend/manage.py makemigrations backend",
+    "apply-migrations": "source ./bin/activate && python backend/manage.py migrate",
+    "migrate": "npm run make-migrations && npm run apply-migrations",
     "test": "mocha . "
   },
   "author": "",

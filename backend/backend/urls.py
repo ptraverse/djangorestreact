@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+from models import Image
 
+
+# Restful API for Django Users
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -32,6 +35,22 @@ class UserViewSet(viewsets.ModelViewSet):
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
+
+
+# Restful API for Web-scraping Images
+class ImageSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Image
+        fields = ('url', 'primary_color')
+        read_only_fields = ('primary_color', )
+
+class ImageViewSet(viewsets.ModelViewSet):
+    queryset = Image.objects.all()
+    serializer_class = ImageSerializer
+
+router.register(r'images', ImageViewSet)
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

@@ -1,4 +1,13 @@
-Django==1.9.7
-django-filter==0.13.0
-django-rest==0.0.1
-Markdown==2.6.6
+-e git+https://github.com/kevinastone/django-api-rest-and-angular.git@091da774159f0c7e30a6940e5499efb8cd55df4e#egg=API_Example
+Django==1.9.2
+django-extensions==1.6.1
+djangorestframework==3.3.2
+image==1.5.3
+numpy==1.11.0
+Pillow==3.1.1
+scipy==0.17.1
+six==1.10.0
+vboxapi==1.0
+Werkzeug==0.11.4
+wget==3.2
+wheel==0.26.0
