@@ -1,0 +1,25 @@
+{
+  "name": "swu",
+  "version": "1.0.0",
+  "description": "Python + Django + Node + Bower",
+  "main": "server.js",
+  "scripts": {
+    "prestart": "source ./bin/activate && python backend/manage.py runserver & npm run webpack &  ",
+    "manage.py": "python backend/manage.py ",
+    "webpack": "webpack --config webpack.config.js --watch --color",
+    "test": "mocha . "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-react": "^6.5.0",
+    "classnames": "^2.2.5",
+    "concurrently": "^2.1.0",
+    "express": "^4.14.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack": "^1.13.1"
+  }
+}

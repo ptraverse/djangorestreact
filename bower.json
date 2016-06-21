@@ -1,0 +1,17 @@
+{
+  "name": "swu",
+  "description": "Python + Django + Node + Bower",
+  "main": "index.js",
+  "authors": [
+    "Philippe Traverse <philippe.traverse@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
