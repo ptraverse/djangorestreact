@@ -6,12 +6,6 @@ Python/Django backend with a javascripty frontend.
 
 Maybe Adding Electron at the end FTW!
 
-#### Why
-
-Launching a chromebrowser to run a v8 to communicate with a django WSGI server!? Yes it is overengineering.
-
-But Python is FAST and awesome. And JS still has the best front end. And it should be easier than it sounds.
-
 #### Build
 
 Install Python, NodeJS, and Bower Modules
